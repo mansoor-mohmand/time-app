@@ -91,8 +91,9 @@ function Time24()
     let h = date.getHours();
     let m = date.getMinutes();
     let s = date.getSeconds();
+     Init(h,true);
     TIME.innerText = `${TwoDigit(h)} : ${TwoDigit(m)} : ${TwoDigit(s)}`;
-    Init(h,true);
+   
 }
 
 
@@ -104,13 +105,10 @@ let _12or24_ = parseInt(date.toLocaleTimeString().slice(0,2));
 // console.log(date.toString())
 if(_12or24_>12)
 {
-    setInterval(()=>{
-        Time24();
-    },1000);
+    setInterval(()=>Time24(),1000);
 }
 else
 {
-    setInterval(()=>{
-        Time12();
-    },1000);
+    setInterval(()=>Time12(),1000);
 }
+
