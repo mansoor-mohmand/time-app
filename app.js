@@ -98,7 +98,6 @@ function Time24()
     let s = date.getSeconds();
     Init(h,true);
     TIME.innerText = `${TwoDigit(h)} : ${TwoDigit(m)} : ${TwoDigit(s)}`;
-   
 }
 
 function btnAction(time_format)
