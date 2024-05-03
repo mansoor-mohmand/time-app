@@ -3,6 +3,9 @@ let OldHours;
 let GreatingsWord,PMorAM;
 let time12,time24;
 let btn = document.querySelectorAll('[data-btn="btn"]');
+let clr = document.querySelectorAll('[data-clr_action]');
+var root = document.querySelector(':root');
+
 // ! methods
 function TwoDigit(number)
 {
@@ -139,6 +142,15 @@ btn.forEach((i)=>{
 });
 
 
+clr.forEach((i)=>{
+    i.onclick = ()=>{
+        // style.getPropertyValue('--color-font-general');
+        root.style.setProperty('--txt-clr',String(i.dataset.clr_action));
+        // i.dataset.clr_action
+        console.log(String(i.dataset.clr_action))
+    }
+    
+});
 
 
 let date = new Date();
